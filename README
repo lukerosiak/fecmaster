@@ -1,0 +1,13 @@
+A python app for importing all Federal Election Commission records from 1980 onward into a PostgreSQL database. These are the master files, updated weekly to an FTP server.
+
+It is based largely off of the Sunlight Foundation's Data Commons (github: sunlightlabs), but is simpler/smaller in scope and also accomodates all election cycles.
+
+By Luke Rosiak of The Washington Times. Released under GNU license.
+
+To run:
+
+createdb datacommons
+python manage.py fecmasterrunonce 1990 [or whatever start year]
+
+once a week:
+python manage.py fecmasterrunweekly
